@@ -1,0 +1,83 @@
+Certainly! When structuring a Power BI training session for new users with some data understanding, you might organize your content into the following key sections:
+
+Introduction to Power BI
+
+Overview of Power BI
+Key features and capabilities
+Power BI Desktop vs. Power BI Service
+Getting Started with Power BI Desktop
+
+Navigating the interface
+Data loading basics
+Understanding Data Models
+Data Transformation and Modeling
+
+Using Power Query Editor
+Basic data transformations
+Creating relationships between tables
+Introduction to DAX (Data Analysis Expressions)
+Building Reports
+
+Overview of visuals
+Creating and formatting charts and tables
+Using filters and slicers
+Best practices for data visualization
+Power BI Service and Dashboards
+
+Publishing reports from Power BI Desktop
+Creating dashboards in Power BI Service
+Sharing reports and dashboards
+Setting up data refresh
+Data Exploration and Insights
+
+Exploring data with Drill-Throughs
+Quick Insights with AI
+Q&A feature to ask questions about your data
+Advanced Topics
+
+Row-level security
+Advanced DAX calculations
+Introduction to Power BI Mobile
+Resources and Continuing Learning
+
+Online resources and communities
+Continuing education through documentation and courses
+Tips for staying updated with Power BI features
+Each section should be interactive, possibly with hands-on exercises that allow users to practice the concepts being taught. Including real-world scenarios relevant to your company's data can also help make the training more impactful.
+
+When it comes to data, the faster you can turn this into this, the faster you can understand and use it, all to make your business run better. With Microsoft Power BI, you can quickly connect to data, prep it, model it, and visualize as much or as little as you like. Then securely share insights, even embed it all into your app or website. To get started, download the free Power BI desktop application and hop right in. Soon you'll be connecting to hundreds of data sources on-premise or in the cloud like Excel, Salesforce, Google Analytics, social networks, even IoT devices to get real-time information and turning all that data into live interactive visuals. When you get the hang of that, upgrade to pro. You'll need that to start collaborating freely, creating dashboards that deliver a 360-degree real-time view of your business, control how your data is accessed and used, and to package and deliver your stunning new content to users with apps of their own. The premium version is for really scaling up across larger enterprises and embedding content past your own digital properties without per user licenses. And one more thing, want it all on mobile so you can react to changes on the fly? Here you go. With Power BI we make it easy to always be in compliance too, for things like GDPR. Download the free Power BI application today and start turning your data into smarter decisions for your business.
+
+Hi, I'm Jane from Odyssey Training. I'd like to talk to you about all of the exciting things about Microsoft's Power BI product. Now you've probably heard about it, it's a great big buzzword at the moment, everybody seems to be talking and wanting to use it. A lot of people are asking the question why don't I just keep using Excel. What's so special about Power BI? Well, stay and listen, and we'll tell you all about it. Power BI does sound very technical, it's actually self-service business intelligence, which means that you're able to produce some fantastic-looking visual reports. We don't have to just wade through dull dry numbers all the time. If you're a person who must make those reports for management, you're able to use Power BI. If you're the actual person making decisions from these reports, you're going to be able to interactively play with those reports, clicking on different parts of it, and able to gain greater insight into your results. Power BI lets you pull data in from multiple sources. You can pull it in from SAP, from Oracle, from any data warehouse, from even an Excel file, from a website. There are over sixty-nine different sources that you can pull it in from at the moment; they're growing all the time. When you bring that data in, it's probably going to need a bit of cleaning up, and I bet that more than a few of you have spent a lot of your time going in getting rid of columns, replacing and finding staff, making it just look a lot better so that you can make a decent report. The best news is we have this beautiful tool in Power BI called the query editor, and what you can do with that is clean it up just once, next month or next week where you have to do it all over again, you just simply bring the data in, it's magically kept all your steps, and you're ready to go, a massive time saver. So once you've got this data model, you can start creating what we call reports and dashboards. Now these contain visualizations, these are the next generation of the graphs that you are probably familiar with from Excel. Now the beauty of these is that they are interactive, you can touch them, you can play with them, you can see other graphs changing as you do that, and what makes it even better is that you can look at it on different devices. You don't have to be staring at a screen at your desk, you can be looking at it on your phone, on your tablet, everybody in the meeting can be opening it up. So if you're worried that you actually have to be technically minded to use Power BI, if you're worried that you have to know a lot about Excel, that's not necessarily so. Basically, if you have got a background in Excel, you're a little bit ahead of the game. Excel has had charts in it for a very long time but this starts a little bit dated and many users have found that they can't quite get the graph that they want. One of the most amazing features of Power BI is the artificial intelligence behind it. You've been slaving away making all these fantastic-looking visualizations, but one of the great things is you can click a button and it's going to actually analyze your data for you and produce a whole bunch of different graphs, you might be able to look at one of them and say hey, that's even better than what I could think of. So quick insights is something that you might want to employ to get just the right answer to the story that you're trying. So if you're interested in any of these features or learning how it all goes together in Power BI, then please check out Odyssey Training's Power BI courses starting at an introductory level, working its way through to advanced. You can find out more information about those on the Odyssey Training website at odysseytraining.com.au.
+
+What's the difference between Excel and Power BI? My name is John and I'm going to answer that question in this video. So if you've been wondering what Power BI is and when to use it over Excel, then this video is for you. I'm going to give a very high level overview of what each of these tools can do, when to use them, and how they can even work together. I'm not going to go into specific detail on the differences between each of these tools because they're both being developed very rapidly and this video would likely be out of date by next week. So we'll first start with a definition of the tools and then we'll jump into the applications and see what they look like. So we'll first start with Power BI. Now Power BI is a platform for creating interactive dashboards and easily sharing them with your team. Of course, Excel is a spreadsheet application that can do just about anything, including creating interactive dashboards. One of the important parts of this is that both of these platforms are developed by Microsoft and we'll take a look at why that's important at the end of the video. So let's first take a look at Power BI. Power BI really has two main components: the first is the desktop app, which we're looking at here. This is a separate application that you'll download and install on your computer. And within the desktop app, you can use Power Query to get data from any source, then you'll use Power Pivot to create joins and write DAX measures or formulas on your data, and then of course you can create visualizations. These are in the form of reports and even dashboards. So Power BI has a fantastic visualization option with all kinds of different charts and visualization types that you can add over here, and you modify these and format these on the reports and you can lay them out any way you like and even create multiple sheets or tabs here with different reports on them. This is a basic report that we create in our Power BI Dashboards and Data Online Course, but of course, you can also make these much fancier, and here's an example from Microsoft here on a sample data set with some sales and returns reports. The second component of Power BI is the online app or service, and this is where you can upload your reports to the web or an on-premise server and then easily share them with your team. One fantastic feature of these reports is that they're highly interactive, there's a feature called cross-filtering which allows you to essentially click on any element in a chart and then that will filter down the rest of the charts or visuals on that sheet. There's also more simplified views for dashboards here and you can have your users consume these on their mobile apps on an iOS device or Android, and even an Apple Watch. There's also an apps feature which allows you to again create more simplified views here that are easier for users to navigate and you can apply row-level security so certain users only have access to specific data. Excel and the sharing features of Power BI can have one advantage over Excel which is that it pretty much prevents you from emailing files around that might contain the most up-to-date data. Power BI connects directly to your data sources and then you can schedule refreshes on a daily or weekly basis and that way your users are always looking at the most up-to-date data. Next, we'll take a look at good old Excel, and of course, with Excel you can create interactive reports and dashboards as well. Here's a dashboard and it is interactive with these slicers here so we can click on the slicers to filter down all of the charts on the sheet. Now these might not be as cool as the new Power BI visuals and it lacks some of the cross-filtering capabilities as well, at least at the time of this video, but we can create dashboards in Excel and we can also create anything else. So on this sheet here I have more of a financial model or in this case a loan schedule where we have some cells where we'd make inputs and then we have additional cells with more advanced calculations that give us the outputs. In Power BI there's not really a flexible grid like this, everything is going to be stored in tables and then you'll write DAX measures or formulas against those tables and use those in the visuals. So if you want to do financial modeling, forecasting, and things like that you will do that in Excel. And of course, with Excel, sharing can be a challenge if you're emailing files around but there are options with SharePoint, OneDrive, and even Microsoft Teams to make files more easily shareable with your team. And finally, I want to talk about some similarities between Excel and Power BI. The first is that both of these tools use Power Query and PowerPivot so if you've learned either of these features for Excel you can directly apply that knowledge to Power BI. The second is that both of these tools integrate well together so if you've created a data model in Excel you can publish that to Power BI without having to recreate the entire thing. These tools also integrate well with other Office applications like Teams and Power Apps which will of course save you time and help you automate processes. The point here is that you don't necessarily have to use Excel over Power BI or one or the other, you can use both and you might use Power BI for some reporting and dashboarding needs and of course, you'll still use Excel for any financial modeling and reporting needs as well. I think all of these integrations really give Power BI an advantage over other business intelligence applications because the learning curve is much easier and you don't necessarily have to go learn an entire new formula language or anything like that. Microsoft also makes it very easy to get started with Power BI, you can download the desktop app for free and start creating your reports and then when you're ready to publish those up and share those with your other users the pricing currently starts at $10 per month per user but it is included in some Microsoft 365 plans so definitely check that out as well. And if you're ready to start learning Power BI we also have an online course called the Power BI Dashboards and Data Online Course and we're running a special offer on that right now, I'll put a link to that in the description below this video so definitely check that out. I hope this video has helped you, of course, leave a comment below if you have any questions or suggestions, thanks again for watching, have a great day, I'll see you in the next video.
+
+A high-level overview for a one-hour session about Power BI could be structured to provide a comprehensive yet digestible introduction to the tool, its benefits, and its usage across various industries. Here's a suggested breakdown:
+
+1. Introduction to Power BI (10 minutes)
+Overview of Power BI: Explain that Power BI is a business analytics service provided by Microsoft that provides interactive visualizations and business intelligence capabilities with an interface simple enough for end users to create their own reports and dashboards.
+Components of Power BI: Briefly introduce the main components such as Power BI Desktop, Power BI Service, and Power BI Mobile Apps.
+2. Key Features of Power BI (10 minutes)
+Data Visualization: Discuss the dynamic data visualization capabilities that allow for real-time dashboard updates.
+Data Connectivity: Highlight its ability to connect to a wide variety of data sources, from simple Excel sheets to complex databases like SQL, and even cloud services.
+Advanced Analytics: Touch on the integration with advanced analytics tools and AI capabilities, which can automatically generate insights from data.
+3. Benefits of Power BI (10 minutes)
+Empowering Decision Making: Emphasize how Power BI empowers users at all levels of an organization to make data-driven decisions.
+Ease of Use: Discuss how users can create complex reports with no advanced training in statistical analysis, making it accessible to a broader audience.
+Cost-Effectiveness: Mention the competitive pricing and scalability that makes Power BI accessible for small businesses as well as large enterprises.
+Integration: Highlight how well it integrates with other Microsoft products and services, enhancing its utility within organizations already using Microsoft solutions.
+4. Industry Use Cases (15 minutes)
+Retail: Describe how Power BI helps retailers track customer behavior, manage inventory, and optimize supply chains.
+Finance: Explain its use in financial forecasting, risk management, and compliance monitoring.
+Healthcare: Illustrate its application in managing patient data, monitoring treatment outcomes, and operational efficiency.
+Manufacturing: Discuss its role in monitoring production processes, quality control, and logistical operations.
+5. Practical Demonstration (10 minutes)
+Live Demo: Provide a quick live demo of Power BI by showing how to connect to a data source, create a report, and publish it as a dashboard.
+Interactive Visuals: Show a few examples of interactive charts and how changing parameters can affect the visuals.
+6. Q&A Session (5 minutes)
+Open Floor: Allow the audience to ask questions based on the presentation or seek clarification on specific points related to their needs.
+Conclusion and Resources (5 minutes)
+Summary: Recap the key points discussed.
+Further Learning: Provide resources for deeper learning, such as links to Microsoft’s tutorials, community forums, and online courses.
+Call to Action: Encourage the audience to try out Power BI with a specific call to action, perhaps guiding them to download Power BI Desktop and explore its capabilities with a trial dataset.
+This structured approach ensures that participants gain a clear understanding of what Power BI is, appreciate its benefits, and see its practical applications across different industries, all within the span of one hour.
+
