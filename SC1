@@ -1,14 +1,52 @@
-Good Morning Everyone, thank you for joining,
+Refined Demo Part 1: Power BI Desktop
+Introduction to Power BI Desktop:
 
-I know we got a mix of audinece who has different leel of compoency in Power BI, some oare begoneer,s, imtenraite and some may be high level. This seesion is
+"Welcome, everyone! We're starting our journey into Power BI with the Desktop version. It's a powerful, free tool that you download and install on your computer. It serves as the central workshop for building our business intelligence reports. Let's launch Power BI Desktop and dive into its core functionalities."
 
-please note this is a begginers session, we won't cover any advance tips. tricks, hacks, programming or features. the objecyve is to get the rport runingin one hours, and my aim is to avicheve this outcome.
+[Display Power BI Desktop]
 
-I will try to make the sesion more intesring ad happy to take your Question at the ed we got 15 minutes to cover any doufts if you got. We got lot to coevr so i'll starigh away dive into the session and give you good peak on the diferent funtioa of feuaites of power bi.
+"Here is the main interface of Power BI Desktop. It's organized into several key sections, each designed to handle different aspects of report creation. Let's explore these sections one by one."
 
+1. Data Model (Model View):
 
-To make life easy i picked up very relateable datasets which is High Speed Rail projects world wide. The cost data in this dataset is for civil infrastructure, systems, stations, and overheads, but not rolling stock or financing charges.
+"Let’s begin with the Data Model. Consider this as the engine room of our operation. It's where our data becomes functional and ready for analysis. Here’s how we do it:
 
-A high-level overview for 45 minutes session about Power BI folowed by Q&A Sessions, the session structured to provide a comprehensive yet digestible introduction to the tool, its benefits, and its usage across various industries. 
+Connecting to Data Sources: Our first step is to bring in data from various sources. Today, I'll connect to an Excel file to show you how it's done."
+[Demonstrate connecting to an Excel file]
 
-Before we divide into, THOSE WHO DON'T HAVE POWER BI and you want to work in Power BI OR THOSE WHO ARE dong reporting through EXCEL, AND YOU WORKS DEMAND REPORTING THRUGHT POWER BI. You can achcive that, You need to raise request to dowanload Power bI DESKTOP THROUGH SERVICE NOW REQUEST. 
+"- Transforming Data: After loading our data, it often needs tweaking to fit our needs. This can include renaming columns, adjusting data types, or creating new calculated columns."
+
+[Illustrate data transformation in Query Editor]
+
+"- Establishing Relationships: With our data in good shape, we then link different tables through relationships, enabling a seamless flow of analysis across them."
+
+[Show setting up a relationship between two tables]
+
+"This segment forms the bedrock of our report, ensuring that all subsequent analysis is based on clean, well-structured data."
+
+2. Report View:
+
+"Moving on to the Report View. This is where your data tells its story through visuals. Let’s see it in action:
+
+Creating Visuals: Drag fields onto the canvas and watch as they transform into interactive charts, graphs, and more. Let’s make a bar chart using our sales data."
+[Demonstrate creating a bar chart]
+
+"- Enhancing Visuals: After creation, we can beautify and modify our charts for better clarity and visual appeal—like adjusting colors, setting scales, or applying various filters."
+
+[Showcase customization of the bar chart]
+
+"You’ll likely spend a considerable amount of time here, crafting the narrative of your data through thoughtful and compelling visualizations."
+
+3. Dashboard Creation (Dashboard Pane):
+
+"Finally, we have Dashboard Creation. Once our reports are polished, we can elevate key visuals to a dashboard. Dashboards merge multiple visuals into a unified display that updates dynamically with new data. Let’s pin our earlier bar chart to a new dashboard."
+
+[Demonstrate pinning a visual to a dashboard]
+
+"Dashboards are crucial for delivering concise, at-a-glance insights from complex data sets, making them an essential tool for decision makers."
+
+Closing of Part 1:
+
+"That wraps up our overview of Power BI Desktop. We’ve covered how to import, prepare, and visualize data to create powerful narratives. Are there any questions on these processes before we proceed to Power BI Service?"
+
+This version of the script aims to be more dynamic and engaging, clarifying the purpose and function of each part of Power BI Desktop while maintaining an inviting tone for beginners.
