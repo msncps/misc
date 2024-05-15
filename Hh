@@ -1,0 +1,7 @@
+Good Afternoon, everyone! I'm thrilled to see so many of you here, eager to learn about one of the most important tools in data analytics and business intelligence—Power BI.
+
+Today’s session is designed for those new to Power BI and those ready to advance their skills. Whether you're a data analyst, a manager, or simply curious about the capabilities of Power BI, this session will provide a foundational understanding of how Power BI can transform the way we visualize and derive insights from data. We'll cover some advanced tips and tricks but won't delve into heavy programming or technical features. The goal is to help you run your own analyses and achieve impactful outcomes.
+
+For those who don't know me, I'm Dave—I work as a BI Analyst in the Data Analytics team, creating reports and analysis that support our business divisions on a daily basis. Before joining gb, I consulted with companies like Ford Motors, CISO, and the Department of Health and Social Care.
+
+Power BI is a self-service business intelligence tool that enables users to connect to various data sources, transform that data, and easily create interactive reports and dashboards. These resources are designed to be shared across your organization. Power BI helps us make informed decisions based on visual data representations that are easy to understand and navigate.
