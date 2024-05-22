@@ -10,29 +10,14 @@ One day, the young man found that he was blocked from going into the factory. Mu
 
 Part 2: My Own Lesson in Humility
 
-This tale resonates deeply with my own journey. Many years ago, I joined Toastmasters, brimming with confidence and eagerness. My mentor, a person of wisdom and patience, advised me to start with simpler themes, to build my foundation in public speaking slowly. But driven by overconfidence, I ignored this advice and chose a complex topic for a major speech. The result was a disaster, not just for my self-esteem but for my mentor's reputation as well.
+This tale resonates deeply with my own journey. Many many years ago, I joined Toastmasters, brimming with confidence beavuse i was in a leaderhip role doing consulting assignment in Middle East and in my opioninon speaking in front of the audience was a cake walk, but i happen to join to TM, the club was very professionla, they allocated a mentor to me and she was very learned, seaonsed and highly respectable TM. I was brimming with condifence, so without any delay i intiated the icebreaker and they gave me a slot to speak in a short notice. My mentor said go easy and tae a sim0le topic to start with, but i thiuhjj my mentor is understaning to me. So i've prentation which is a]slighly advanced for a icebreaker o kick in, but i went with my idea to present thm in the icebreaker. I did my speech that was abilsutley ruhless and hoindirous. I comoleted failed and embrassed my mentor. That fialure dauting to me i just quit TM and it took me man many year toi join back. 
 
-I left Toastmasters, heartbroken and humbled. It took years before I gathered the courage to return and face the craft I once thought I had mastered. The lesson was clear: my failure was not in the attempt, but in not heeding the careful guidance of my mentor.
+My mentor, a person of wisdom and patience, advised me to start with simpler themes, to build my foundation in public speaking slowly. But driven by overconfidence, I ignored this advice and chose a complex topic for a major speech. The result was a disaster, not just for my self-esteem but for my mentor's reputation as well.
 
-Combining the Lessons
+I left Toastmasters, heartbroken and humbled. It took years before I gathered the courage to return and face the craft I once thought I had mastered. The lesson was cleaCombining the Lessons
 
 Both stories—mine and that of the young technician—pivot on a crucial moment where mentorship was either partially heeded or outright ignored. Both of us learned the hard way that mentorship is not merely about listening—it's about fully grasping and respecting the wisdom imparted.
 
-And so, my message to you today, shaped by setbacks and opportunities alike, is simple: Listen wholeheartedly to your mentors. Absorb their wisdom fully.
+And so, my message to you today, shaped by setbacks and opportunities alike, is simple: Listen wholeheartedly to your mentors. Absorb their wisdom fully an dmost imprtably choose the right mentor.
 
-So let's treat mentorship not merely as a task to check off, but as a sacred conversation. Let's fully embrace all the lessons, both easy and challenging. Let's be diligent and patient students, committed to learning every part of the lesson, not just what seems immediately relevant.
-
-
-====
-
-Once upon a time, a young man worked diligently at a factory under the guidance of an old technician, his mentor, who taught him to "talk less, do more, and never stop developing his skills." Years passed, and when the mentor retired, the young man took over his role, applying his lessons with great dedication.
-
-Despite his hard work, he noticed that less experienced colleagues were advancing while his career stagnated. Troubled, he sought his mentor's advice. He shared his frustrations, puzzled why his diligent work hadn't resulted in promotion. The old man asked if he felt indispensable to the factory, to which the young man confidently replied, "Yes." Pondering this, the mentor suggested he take a day off to demonstrate his value.
-
-Reluctantly, the young man agreed, and upon his return, learned that his absence had caused significant disruption. Recognizing his value, the factory manager promoted him to senior technician. This success led him to use absence as a tool to gain appreciation, which seemed effective initially.
-
-However, this strategy backfired when he was suddenly barred from entering the factory one day, only to discover he had been fired. Distraught, he sought his mentor, who explained he had missed the deeper lesson. "You understood that being overlooked is like a light bulb always on—it's only missed when it's off. But a bulb that goes off too often will eventually be replaced by one more reliable," the mentor said. He advised that real value comes not just from being indispensable but from being consistently reliable.
-
-The mentor then imparted a final piece of wisdom: "In life, as with light bulbs, we must balance our visibility with our reliability. People may take us for granted when we're always there, but they will replace us if we turn off too frequently. Appreciate and be appreciated, work diligently, and life will find a balance for you."
-
-This story teaches us the importance of listening fully to guidance, not just the parts that seem beneficial in the short term. Like the young technician, we must strive for balance and understand the full scope of our mentors' lessons, for they prepare us not just for immediate success but for sustainable achievement.
+So let's treat mentorship not merely as a task to check off, but as a sacred conversation. Let's fully embrace all the lessons, both easy and challenging. Let's be diligent and patient students, committed to learning every part of the lesson, not just what seems immediately relevant.r: my failure was not in the attempt, but in not heeding the careful guidance of my mentor.
