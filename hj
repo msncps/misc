@@ -1,0 +1,5 @@
+I recently encountered an assignment where users loaded a file into Power BI, and it took a significant amount of time due to cells being formatted all the way to the end of the worksheet. This might be the issue if you're wondering why your Power BI report is slow. If you're not careful, selecting the entire worksheet could include all 1,048,576 rows and 16,384 columns, especially if you're using Excel 2007 or later.
+
+Check out this video for a quick hack to address this issue before loading data into Power BI. I recently came across this solution, which was introduced around 2013. Many of you might already know about this, but give me a thumbs up if you don't.
+
+For more details, check out the Microsoft documentation on Clean Excess Cell Formatting.
