@@ -154,6 +154,11 @@ Start using SWITCH in your Power BI reports today and experience the difference 
 #PowerBI #DataAnalysis #SWITCHFunction #BusinessIntelligence #DataVisualization #PowerBIDAX #DataScience #LinkedInLearning
 
 
+=IF(AND(B2 >= 90, C2 > 10), D2 * 0.20,
+    IF(AND(B2 >= 80, B2 < 90, C2 >= 5, C2 <= 10), D2 * 0.15,
+        IF(AND(B2 >= 70, B2 < 80, C2 < 5), D2 * 0.10, D2 * 0.05)
+    )
+)
 
 
 
