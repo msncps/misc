@@ -1,4 +1,25 @@
- Keep Your Power BI Reports Fresh: Creating a Refresh Time DAX Measure 🕒
+Keep Your Power BI Reports Fresh: Creating a Refresh Time DAX Measure 🕒
+
+Here’s a quick guide on how to create a "Refresh Time" DAX measure to display the last refresh date of your Power BI reports:
+
+Three Use Cases with DAX Examples
+
+1. Refresh Time = NOW()
+This measure captures the current date and time whenever the data is refreshed.
+
+2. Refresh Dae base on the data point date keeping user aware of th emax date rfesrh date inseatd of real time
+
+3. Refresh Time from Power query, this is same as first chose, but for user convienece.
+
+
+Choose a suitable date-time format to clearly display the refresh date and time.
+
+Add the Measure to Your Report: Drag and drop the newly created "Refresh Time" measure onto your report canvas. Use a card visualization to display the refresh date prominently.
+
+Let’s keep our data freshed and our users informed!
+
+
+Keep Your Power BI Reports Fresh: Creating a Refresh Time DAX Measure 🕒
 
 Hey LinkedIn community!
 
