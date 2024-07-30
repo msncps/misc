@@ -1,0 +1,34 @@
+Understanding the Problem
+We need to create a dynamic calculation in Power BI that determines whether a project's duration overlaps with a given month. This should be adaptable without manual adjustments for each month.
+Proposed Solution: DAX Measure
+Here's a DAX measure that can achieve this:
+Is_In_Month = 
+VAR StartOfMonth = START_OF_MONTH(SELECTEDVALUE('Date'[Date]))
+VAR EndOfMonth = EOMONTH(STARTOFMONTH(SELECTEDVALUE('Date'[Date])))
+RETURN
+IF(
+    AND(
+        'YourTable'[StartDate] <= EndOfMonth,
+        'YourTable'[EndDate] >= StartOfMonth
+    ),
+    "Y",
+    "N"
+)
+
+Explanation:
+ * VAR StartOfMonth = START_OF_MONTH(SELECTEDVALUE('Date'[Date])): This line calculates the first day of the current month based on the selected date in your date table.
+ * VAR EndOfMonth = EOMONTH(STARTOFMONTH(SELECTEDVALUE('Date'[Date]))): This line calculates the last day of the current month.
+ * RETURN IF( AND( 'YourTable'[StartDate] <= EndOfMonth, 'YourTable'[EndDate] >= StartOfMonth ), "Y", "N"): This part checks if the project's start date is before or equal to the end of the month, and if the project's end date is after or equal to the start of the month. If both conditions are true, it returns "Y", otherwise "N".
+Assumptions:
+ * You have a date table named 'Date' in your Power BI model.
+ * Your data table containing project information is named 'YourTable' with columns 'StartDate' and 'EndDate'.
+ * You'll use this measure in a visual where the 'Date' column is used as a slicer or axis to filter the month.
+Usage:
+ * Create a new measure in your 'YourTable' using the above DAX code.
+ * Use this measure in a table visual or any other visual where you want to see if a project is active in a specific month.
+Additional Considerations:
+ * If you want to count the number of projects in a month, you can use this measure as a filter in a calculated column or another measure.
+ * For performance optimization, consider creating calculated columns for start and end month numbers and using those in the measure.
+ * If you have complex date scenarios (e.g., time zones, leap years), you might need additional adjustments to the DAX code.
+By using this DAX measure, you can dynamically determine if a project overlaps with a specific month without creating individual formulas for each month.
+Would you like to explore any specific use cases or modifications to this measure?
