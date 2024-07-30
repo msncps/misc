@@ -1,0 +1,11 @@
+CheckMonthPresence = 
+VAR StartMonth = MONTH(SELECTEDVALUE(Table[START DATE]))
+VAR EndMonth = MONTH(SELECTEDVALUE(Table[END DATE]))
+VAR CurrentMonth = MONTH(MIN('Calendar'[Date])) 
+
+RETURN 
+IF(
+    AND(CurrentMonth >= StartMonth, CurrentMonth <= EndMonth),
+    1,
+    0
+)
