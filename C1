@@ -1,0 +1,10 @@
+Calendar = 
+ADDCOLUMNS (
+    CALENDAR (DATE(2024, 1, 1), DATE(2024, 12, 31)),
+    "Year", YEAR([Date]),
+    "Month", FORMAT([Date], "MMMM"),
+    "Month Number", MONTH([Date]),
+    "Day", DAY([Date]),
+    "Day of Week", FORMAT([Date], "dddd"),
+    "Week Number", WEEKNUM([Date])
+)
