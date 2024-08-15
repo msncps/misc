@@ -1,9 +1,12 @@
-Why the F-Shaped Pattern Matters in Dashboard Design
 
-Let's take a look at two examples: the left scorecard from a match in The Hundred (100-ball cricket tournament), and the right scorecard from a traditional cricket format.
+Here's a concise LinkedIn post that addresses how to organize information to minimize cognitive load, using the images and referencing Stephen Few's “Information Dashboard Design”:
 
-Looking at this scorecard Left Image, it's clear how scattered data can lead to unnecessary eye movement, making it harder to quickly understand the game situation. 
+Organizing Information to Minimize Cognitive Load: A Tale of Two Scorecards
 
-In contrast, the scorecard on the right employs a more linear and systematic design, which aligns with the F-shaped pattern of content scanning. This pattern, modelled by the Nielsen Norman Group, reflects how users naturally scan information: starting at the top left, moving horizontally across the top, and then down the left side in an F-like motion.
+In the world of data visualization, how we present information can make or break the user experience. Take a look at these two cricket scorecards:
 
-In any data presentation, whether it's for sports like cricket or for business dashboards, the layout and organization of information are key to effective communication. The scattered scorecard on the left shows how poor design can detract from the user experience, while the systematic, F-shaped pattern on the right demonstrates how thoughtful design can make all the difference. By aligning scorecard data in a linear, intuitive format, you not only reduce cognitive load but also create a more engaging and enjoyable experience for your audience.
+On the left, the scorecard is cramped and disorganized, forcing viewers to move their eyes all over the screen just to piece together the match situation. This scattered layout increases cognitive load, making it harder to quickly grasp the key details.
+
+Contrast this with the scorecard on the right, which is linear, aligned, and easy to read. By organizing the information systematically, this scorecard allows viewers to intuitively follow the game without unnecessary effort.
+
+As Stephen Few emphasizes in “Information Dashboard Design,” well-organized data not only enhances clarity but also reduces the mental strain on users. By aligning information according to natural reading patterns, like the F-shaped pattern, we create interfaces that are not only visually appealing but also more efficient and user-friendly.
