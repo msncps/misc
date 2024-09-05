@@ -1,19 +1,19 @@
-__02_CR_WK1_End = 
-VAR CurrentYear = year(today())
+WeekNumber = WEEKNUMBER('APR Tracker Phase 2a'[A. APR Received Date], 2)
 
-var LastWeekEnd = MAXX(
-    FILTER(
-        ALL('APR Tracker Phase 2a'),
-        YEAR('APR Tracker Phase 2a'[A. APR Received Date]) = CurrentYear &&
-        'APR Tracker Phase 2a'[A. APR Received Date] < TODAY() 
-        && 
-        WEEKDAY('APR Tracker Phase 2a'[A. APR Received Date],2) = 7),
-        'APR Tracker Phase 2a'[A. APR Received Date])
-
-var LastWeekEnd_ = IF(ISBLANK(LastWeekEnd),MAXX('APR Tracker Phase 2a','APR Tracker Phase 2a'[A. APR Received Date]),LastWeekEnd)
-
-return
-LastWeekEnd_ + 1
-
-__01_CR_WK1_Start = [__02_CR_WK1_End] - 4
-
+Count_WK1 =
+VAR CurrentYear = YEAR(TODAY())
+VAR UniqueWeeks = VALUES('APR Tracker Phase 2a'[WeekNumber])
+RETURN
+SUMX(
+    UniqueWeeks,
+    CALCULATE(
+        COUNTROWS('APR Tracker Phase 2a'),
+        FILTER(
+            ALL('APR Tracker Phase 2a'),
+            YEAR('APR Tracker Phase 2a'[A. APR Received Date]) = CurrentYear &&
+            'APR Tracker Phase 2a'[WeekNumber] = EARLIER(UniqueWeeks[WeekNumber]) &&
+            'APR Tracker Phase 2a'[A. APR Received Date] >= [WK1_Start] &&
+            'APR Tracker Phase 2a'[A. APR Received Date] <= [WK1_End]
+        )
+    )
+)
