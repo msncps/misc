@@ -30,3 +30,28 @@ RETURN
         COUNTROWS(FilteredTable),
         KEEPFILTERS(FilteredTable)
     )
+
+_02WK1_End = 
+VAR LastWeekEnd = MAXX(FILTER(ALL('TableName'), 'TableName'[Date] < TODAY() && 
+WEEKDAY('TableName'[Date], 2) = 7), 'TableName'[Date])
+RETURN
+LastWeekEnd + 5
+
+
+_01WK1_Start = 
+VAR LastWeekEnd = MAXX(FILTER(ALL('TableName'), 'TableName'[Date] < TODAY() && 
+WEEKDAY('TableName'[Date], 2) = 7), 'TableName'[Date])
+RETURN
+LastWeekEnd + 1
+
+
+
+
+
+
+
+
+
+
+
+
