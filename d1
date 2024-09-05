@@ -1,19 +1,14 @@
-__Count_WK1 = 
-CALCULATE(
-    COUNTROWS('Table'),
-    FILTER(
-        ALL('Table'),
-        'Table'[Date] >= [_01WK1_Start] && 
-        'Table'[Date] <= [_02WK1_End]
-    )
-)
-
-_01_Count_WK1 = 
-CALCULATE(
-    COUNTROWS(
+Count_WK1 =
+VAR UniqueWeeks = VALUES('Table'[WeekNumber])
+RETURN
+SUMX(
+    UniqueWeeks,
+    CALCULATE(
+        COUNTROWS('Table'),
         FILTER(
             ALL('Table'),
-            'Table'[Date] >= [_01WK1_Start] && 
+            'Table'[WeekNumber] = EARLIER(UniqueWeeks[WeekNumber]) &&
+            'Table'[Date] >= [_01WK1_Start] &&
             'Table'[Date] <= [_02WK1_End]
         )
     )
