@@ -17,3 +17,16 @@ SUMX(
         )
     )
 )
+
+Count_WK1 =
+VAR FilteredTable =
+    FILTER(
+        ALL('Table'),
+        'Table'[Date] >= [_01WK1_Start] &&
+        'Table'[Date] <= [_02WK1_End]
+    )
+RETURN
+    CALCULATE(
+        COUNTROWS(FilteredTable),
+        KEEPFILTERS(FilteredTable)
+    )
