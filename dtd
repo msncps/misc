@@ -1,0 +1,22 @@
+5_1_CountDates = 
+CALCULATE(
+    COUNTROWS(
+        FILTER(
+            'ta',
+            NOT(ISBLANK('ta'[siDate])) &&
+            'ta'[siDate] >= VALUE([1_FullMonthStart]) &&
+            'ta'[siDate] <= VALUE([1_FullMonthEnd])
+        )
+    )
+)
+5_1_CountDates = 
+CALCULATE(
+    COUNTROWS(
+        FILTER(
+            'ta',
+            NOT(ISBLANK('ta'[siDate])) &&
+            FORMAT('ta'[siDate], "yyyy-MM-dd") >= FORMAT([1_FullMonthStart], "yyyy-MM-dd") &&
+            FORMAT('ta'[siDate], "yyyy-MM-dd") <= FORMAT([1_FullMonthEnd], "yyyy-MM-dd")
+        )
+    )
+)
