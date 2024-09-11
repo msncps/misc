@@ -1,22 +1,19 @@
-5_1_CountDates = 
+Await Info = 
 CALCULATE(
-    COUNTROWS(
-        FILTER(
-            'ta',
-            NOT(ISBLANK('ta'[siDate])) &&
-            'ta'[siDate] >= VALUE([1_FullMonthStart]) &&
-            'ta'[siDate] <= VALUE([1_FullMonthEnd])
-        )
-    )
+    COUNTROWS('T2a'),
+    NOT(ISBLANK('T2a'[DCI])) &&
+    ISBLANK('APR Tracker Phase 2a'[CDIS])
 )
-5_1_CountDates = 
+
+Await Info = 
 CALCULATE(
-    COUNTROWS(
-        FILTER(
-            'ta',
-            NOT(ISBLANK('ta'[siDate])) &&
-            FORMAT('ta'[siDate], "yyyy-MM-dd") >= FORMAT([1_FullMonthStart], "yyyy-MM-dd") &&
-            FORMAT('ta'[siDate], "yyyy-MM-dd") <= FORMAT([1_FullMonthEnd], "yyyy-MM-dd")
-        )
-    )
+    COUNTROWS('T2a'),
+    -- Existing filters
+    NOT(ISBLANK('T2a'[DCI])) && 
+    ISBLANK('APR Tracker Phase 2a'[CDIS]) &&
+
+    -- New filters
+    NOT(ISBLANK('T2a'[SED])) &&                -- Filter out non-blank SED dates
+    'T2a'[Reason] <> "Clear" &&                -- Filter out where Reason is "Clear"
+    'T2a'[Status] <> "Out"                     -- Filter out where Status is "Out"
 )
