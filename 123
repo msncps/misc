@@ -1,0 +1,13 @@
+CountWeeksFromLastFinishedDate = 
+VAR LastFinishedDate = 
+    CALCULATE(
+        MAX('YourTable'[Date]),
+        'YourTable'[Date] <= TODAY() - WEEKDAY(TODAY(), 2) 
+    )
+VAR StartOfWeek = 
+    WEEKNUM(LastFinishedDate)
+RETURN
+    CALCULATE(
+        COUNTROWS('YourTable'),
+        'YourTable'[Date] < LastFinishedDate
+    )
