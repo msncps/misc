@@ -1,15 +1,15 @@
-##_Combined_Measure = 
+##_Toggle_Measure =  
 SWITCH(
     TRUE(),
-    SELECTEDVALUE('SlicerTable'[Selection]) = "Option 1",
-        CALCULATE(COUNTROWS('PP'),
-            NOT(ISBLANK('PP'[InSufficient ])) && 
-            ISBLANK('APR Tracker Phase 2aa'[Sufficient ])
+    NOT(ISBLANK('PP'[InSufficient])) && ISBLANK('APR Tracker Phase 2aa'[Sufficient]),
+        CALCULATE(COUNTROWS('PP'), 
+            NOT(ISBLANK('PP'[InSufficient])) && 
+            ISBLANK('APR Tracker Phase 2aa'[Sufficient])
         ),
-    SELECTEDVALUE('SlicerTable'[Selection]) = "Option 2",
-        CALCULATE(COUNTROWS('PP'),
+    ISBLANK('PP'[InSufficient PI]) && ISBLANK('PP'[Report]),
+        CALCULATE(COUNTROWS('PP'), 
             ISBLANK('PP'[InSufficient PI]) && 
             ISBLANK('PP'[Report])
         ),
-    0  -- Default if no conditions match
+    0  -- Optional default if no conditions match
 )
