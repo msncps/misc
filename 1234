@@ -1,12 +1,12 @@
 ##_Combined_Measure = 
 SWITCH(
     TRUE(),
-    [Some_Condition] = "Value1", 
+    SELECTEDVALUE('SlicerTable'[Selection]) = "Option 1",
         CALCULATE(COUNTROWS('PP'),
             NOT(ISBLANK('PP'[InSufficient ])) && 
             ISBLANK('APR Tracker Phase 2aa'[Sufficient ])
         ),
-    [Some_Condition] = "Value2",
+    SELECTEDVALUE('SlicerTable'[Selection]) = "Option 2",
         CALCULATE(COUNTROWS('PP'),
             ISBLANK('PP'[InSufficient PI]) && 
             ISBLANK('PP'[Report])
