@@ -23,3 +23,23 @@ SWITCH(
 
 ##_03_4 = CALCULATE(COUNTROWS('PP'),NOT(ISBLANK('PP'[Supplier)) && ISBLANK('PP'[Due]))
 
+
+##_Bar_Measure = 
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE(CategoryTable[Category]) = "InSufficient and Sufficient",
+        CALCULATE(COUNTROWS('PP'), NOT(ISBLANK('PP'[inSufficient])) && ISBLANK('PP'[Sufficient])),
+    
+    SELECTEDVALUE(CategoryTable[Category]) = "InSufficient and Report",
+        CALCULATE(COUNTROWS('PP'), ISBLANK('PP'[inSufficient]) && ISBLANK('PP'[Report])),
+    
+    SELECTEDVALUE(CategoryTable[Category]) = "Paper and Govern",
+        CALCULATE(COUNTROWS('PP'), NOT(ISBLANK('PP'[Paper])) && ISBLANK('PP'[Govern])),
+    
+    SELECTEDVALUE(CategoryTable[Category]) = "Supplier and Due",
+        CALCULATE(COUNTROWS('PP'), NOT(ISBLANK('PP'[Supplier])) && ISBLANK('PP'[Due])),
+    
+    0  -- Default value in case none of the conditions are met
+)
+
+
