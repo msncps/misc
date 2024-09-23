@@ -1,3 +1,14 @@
+BarChartMeasure =
+SWITCH(
+    TRUE(),
+    CALCULATE(COUNTROWS('YourTableName'), NOT(ISBLANK('YourTableName'[Correct Date])) && ISBLANK('YourTableName'[Incorrect Date])) > 0, "AAA",
+    CALCULATE(COUNTROWS('YourTableName'), ISBLANK('YourTableName'[Incorrect Date])) && NOT(ISBLANK('YourTableName'[Issues Date])) > 0, "BBB",
+    CALCULATE(COUNTROWS('YourTableName'), ISBLANK('YourTableName'[Issues Date])) && NOT(ISBLANK('YourTableName'[Case Date])) > 0, "CCC",
+    CALCULATE(COUNTROWS('YourTableName'), ISBLANK('YourTableName'[Case Date])) && NOT(ISBLANK('YourTableName'[Approval Date])) > 0, "DDD",
+    "Other"
+)
+
+
 ##_Toggle_Measure =  
 SWITCH(
     TRUE(),
