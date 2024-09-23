@@ -13,3 +13,13 @@ SWITCH(
         ),
     0  -- Optional default if no conditions match
 )
+
+
+##_03_1 = CALCULATE(COUNTROWS('PP'), NOT(ISBLANK('PP'[inSufficient])) && ISBLANK('PP'[Sufficient]))
+
+##_03_2 = CALCULATE(COUNTROWS('PP'),  ISBLANK('PP'[inSufficient ]) &&  ISBLANK('PP'[ Report]))
+
+##_03_3 = CALCULATE(COUNTROWS('PP'),NOT(ISBLANK('PP'[Paper])) && ISBLANK('PP'[Govern]))
+
+##_03_4 = CALCULATE(COUNTROWS('PP'),NOT(ISBLANK('PP'[Supplier)) && ISBLANK('PP'[Due]))
+
