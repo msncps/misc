@@ -1,0 +1,29 @@
+WeekDifference = 
+IF(
+    NOT(ISBLANK('Table'[DateConfirmed])), 
+    DATEDIFF('Table'[DateConfirmed], TODAY(), WEEK), 
+    BLANK()
+)
+
+WeeksLessThan25 = 
+CALCULATE(
+    COUNTROWS('Table'),
+    'Table'[WeekDifference] < 25,
+    NOT(ISBLANK('Table'[DateConfirmed]))
+)
+
+
+WeeksBetween25and50 = 
+CALCULATE(
+    COUNTROWS('Table'),
+    'Table'[WeekDifference] >= 25 && 'Table'[WeekDifference] <= 50,
+    NOT(ISBLANK('Table'[DateConfirmed]))
+)
+
+
+WeeksGreaterThan50 = 
+CALCULATE(
+    COUNTROWS('Table'),
+    'Table'[WeekDifference] > 50,
+    NOT(ISBLANK('Table'[DateConfirmed]))
+)
