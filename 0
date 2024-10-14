@@ -1,0 +1,10 @@
+% Category Sort = 
+SWITCH(
+    TRUE(),
+    'DC'[Percentage of adults in contact with mental health services] < 4.5, 1,
+    'DC'[Percentage of adults in contact with mental health services] >= 4.5 && 'DC'[Percentage of adults in contact with mental health services] <= 5.5, 2,
+    'DC'[Percentage of adults in contact with mental health services] > 5.5 && 'DC'[Percentage of adults in contact with mental health services] <= 6.3, 3,
+    'DC'[Percentage of adults in contact with mental health services] > 6.3 && 'DC'[Percentage of adults in contact with mental health services] <= 7.5, 4,
+    'DC'[Percentage of adults in contact with mental health services] > 7.5, 5,
+    BLANK()
+)
