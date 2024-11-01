@@ -24,3 +24,23 @@ CALCULATE(
         " | "
     )
 )
+
+
+Max Speed Year = 
+VAR MaxSpeed = 
+    CALCULATE(
+        MAX('high speed rail'[Max speed]), 
+        ALLEXCEPT('high speed rail', 'high speed rail'[Country], 'high speed rail'[Line])
+    )
+RETURN
+    CALCULATE(
+        MAX('high speed rail'[Year]),
+        FILTER(
+            'high speed rail',
+            'high speed rail'[Max speed] = MaxSpeed &&
+            'high speed rail'[Country] = EARLIER('high speed rail'[Country]) &&
+            'high speed rail'[Line] = EARLIER('high speed rail'[Line])
+        )
+    )
+
+
