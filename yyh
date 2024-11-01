@@ -1,4 +1,19 @@
-
+Project Line by Max Speed = 
+VAR MaxSpeedPerCountry = 
+    CALCULATE(
+        MAX('high speed rail'[Max speed]), 
+        ALLEXCEPT('high speed rail', 'high speed rail'[Country])
+    )
+RETURN
+    MAXX(
+        FILTER(
+            'high speed rail',
+            'high speed rail'[Max speed] = MaxSpeedPerCountry &&
+            'high speed rail'[Country] = SELECTEDVALUE('high speed rail'[Country])
+        ),
+        'high speed rail'[Line]
+    )
+Explanation:
 
 Max Speed Line = 
 CALCULATE(
