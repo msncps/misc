@@ -1,0 +1,26 @@
+Real Cost of Max Speed Project = 
+CALCULATE(
+    MIN(Table1[Real cost (2023$)]),
+    FILTER(
+        ALLEXCEPT(Table1, Table1[Country], Table1[Line]),
+        Table1[Max speed] = MAXX(
+            ALLEXCEPT(Table1, Table1[Country], Table1[Line]),
+            Table1[Max speed]
+        )
+    )
+)
+
+Line by Real Cost = 
+CALCULATE(
+    CONCATENATEX(
+        FILTER(
+            ALLEXCEPT(Table1, Table1[Country], Table1[Line]),
+            Table1[Max speed] = MAXX(
+                ALLEXCEPT(Table1, Table1[Country], Table1[Line]),
+                Table1[Max speed]
+            )
+        ),
+        Table1[Line],
+        " | "
+    )
+)
