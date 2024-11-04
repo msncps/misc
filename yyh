@@ -1,3 +1,6 @@
+Just completed an in-depth dashboard showcasing global high-speed rail projects from 1998 to 2024. This report covers infrastructure costs, tunnel sections, and maximum speeds, offering valuable insights into the world’s fastest rail networks. Dive into the data to explore how countries are advancing in high-speed connectivity
+
+
 Project Line by Max Speed = 
 VAR MaxSpeedPerCountry = 
     CALCULATE(
