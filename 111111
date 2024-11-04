@@ -1,1 +1,0 @@
-In a very complex table, it's hard to tell which month is the current one, the last one, and the one before that. How about creating a dynamic table that updates with the data? For example, a table with headers showing the current month, the previous month, and the month before that, all dynamically changing.
