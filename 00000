@@ -1,0 +1,187 @@
+```DAX
+SVG Status II = 
+VAR Status_ = SELECTEDVALUE(IT_Systems_Monitoring[Status])
+VAR Data_URL = "data:image/svg+xml;utf8,"
+VAR SVG_Start = "<svg height='100' width='100' xmlns='http://www.w3.org/2000/svg'>"
+VAR No_Blink = "
+
+<style>
+  rect {
+    rx:10;
+    ry:10;
+    stroke: '&[Status_Color]&';
+    stroke-width: 2;
+    fill: '&[Status_Color]&';
+    fill-opacity: 0.3;
+  }
+
+  text {
+    font-family: Segoe UI;
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+  }
+</style>
+"
+```
+Here is the soft copy of the code from the images you provided:
+
+```DAX
+SVG Status II = 
+VAR Status_ = SELECTEDVALUE(IT_Systems_Monitoring[Status])
+VAR Data_URL = "data:image/svg+xml;utf8,"
+VAR SVG_Start = "<svg height='100' width='100' xmlns='http://www.w3.org/2000/svg'>"
+VAR No_Blink = "
+
+<style>
+  rect {
+    rx:10;
+    ry:10;
+    stroke: '&[Status_Color]&';
+    stroke-width: 2;
+    fill: '&[Status_Color]&';
+    fill-opacity: 0.3;
+  }
+
+  text {
+    font-family: Segoe UI;
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+  }
+</style>
+"
+
+<rect height='50' width='145' x='2' y='2'/>
+<text x='35%' y='50%'>" & Status_ & "</text>"
+
+VAR SVG_End = "</svg>"
+RETURN
+```
+
+This DAX code generates an SVG image with dynamic status color and text, likely used in Power BI for visualizing system monitoring statuses.
+
+Citations:
+[1] https://pplx-res.cloudinary.com/image/upload/v1731086997/user_uploads/mvlesnnmj/image.jpg
+[2] https://pplx-res.cloudinary.com/image/upload/v1731087000/user_uploads/vvbswhscj/image.jpg
+[3] https://pplx-res.cloudinary.com/image/upload/v1731086957/user_uploads/fwnaoburs/image.jpg
+----------------------------------------------
+Here is the soft copy of the code from the image you provided:
+
+```DAX
+rx:10;
+ry:10;
+stroke: "&[Status_Color]&";
+stroke-width: 2;
+fill: "&[Status_Color]&";
+fill-opacity: 0.3;
+}
+
+text {
+    font-family: Segoe UI;
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+</style>
+
+<rect height='50' width='145' x='2' y='2'/>
+<text x='35%' y='50%'>" & Status_ & "</text>"
+
+VAR SVG_End = "</svg>"
+RETURN
+----------------------------------------------
+
+```DAX
+rx:10;
+ry:10;
+stroke: "&[Status_Color]&";
+stroke-width: 2;
+fill: "&[Status_Color]&";
+fill-opacity: 0.3;
+}
+
+text {
+    font-family: Segoe UI;
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+</style>
+
+<rect height='50' width='145' x='2' y='2'/>
+<text x='35%' y='50%'>" & Status_ & "</text>"
+
+VAR SVG_End = "</svg>"
+RETURN
+
+VAR Blink = "
+<style>
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+rect {
+    rx:10;
+    ry:10;
+    stroke: '&[Status_Color]&';
+    stroke-width: 2;
+    fill: '&[Status_Color]&';
+    fill-opacity: 0.3;
+    animation: blink;
+}
+
+text {
+    font-family: Segoe UI;
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+</style>
+```
+
+
+----------------------------------------------
+Here is the soft copy of the code from the images you provided:
+
+```DAX
+VAR Blink = "
+<style>
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+rect {
+    rx:10;
+    ry:10;
+    stroke: '&[Status_Color]&';
+    stroke-width: 2;
+    fill: '&[Status_Color]&';
+    fill-opacity: 0.3;
+    animation: blink 5s infinite;
+}
+
+text {
+    font-family: 'Segoe UI';
+    font-size: 1.6em;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    animation: blink 5s infinite;
+}
+</style>
+
+<rect height='50' width='145' x='2' y='2'/>
+<text x='35%' y='50%'>" & Status_ & "</text>"
+
+VAR SVG_End = "</svg>"
+RETURN Data_URL & SVG_Start & Blink & SVG_End
