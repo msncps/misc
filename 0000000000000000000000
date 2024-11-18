@@ -11,3 +11,7 @@ a.	Lookup_Result = LOOKUPVALUE( FSB[Column_L], FSB[Column_D], SELECTEDVALUE(TSH[
 6. INDEX('FE'!I:I,MATCH('TSH'!AQ1882,'FE'!B:B,0))
 7. IF(OR(AR1882="Y",AY1882="Y",BA1882="Y"),"Y","N")
 	YN_Result = IF( OR( TSH[Column_AR] = "Y", TSH[Column_AY] = "Y", TSH[Column_BA] = "Y" ), "Y", "N" )
+
+
+
+CONCAT('FSB'!$G2,", ",'FSB'!$H2,", ",'FSB'!$I2,", ",'FSBt'!$J2,", ",'FSB'!$K2)
