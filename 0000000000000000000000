@@ -15,3 +15,9 @@ a.	Lookup_Result = LOOKUPVALUE( FSB[Column_L], FSB[Column_D], SELECTEDVALUE(TSH[
 
 
 CONCAT('FSB'!$G2,", ",'FSB'!$H2,", ",'FSB'!$I2,", ",'FSBt'!$J2,", ",'FSB'!$K2)
+Concatenated_Result = 
+CONCATENATEX(
+    FILTER(FSB, FSB[Row_Index] = EARLIER(FSB[Row_Index])),
+    FSB[Column_G] & ", " & FSB[Column_H] & ", " & FSB[Column_I] & ", " & FSB[Column_J] & ", " & FSB[Column_K],
+    ""
+)
