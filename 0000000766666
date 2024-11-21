@@ -1,0 +1,43 @@
+LOOKUPVALUE(
+    FSB[Address],
+    FSB[number],
+    CONCATENATEX(
+        FILTER(
+            ALL('TH-50'),
+            'TH-50'[number] = 'FSB'[number]
+        ),
+        'TH-50'[number],
+        ", "
+    )
+)
+---------------
+CALCULATED COLUMN =
+IF(
+    COUNTROWS(
+        FILTER('TH-50', 'TH-50'[number] = FSB[number])
+    ) > 1,
+    "NA",
+    LOOKUPVALUE(FSB[Address], FSB[number], 'TH-50'[number])
+)
+-----------------
+
+Address_Result = 
+VAR CurrentNumber = SELECTEDVALUE('TH-50'[number])
+VAR MatchCount = 
+    CALCULATE(
+        COUNTROWS(FSB),
+        FILTER(
+            FSB,
+            FSB[number] = CurrentNumber
+        )
+    )
+RETURN
+    IF(
+        MatchCount = 1,
+        LOOKUPVALUE(
+            FSB[Address],
+            FSB[number], CurrentNumber,
+            "NA"
+        ),
+        "NA"
+    )
