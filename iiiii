@@ -10,3 +10,28 @@ join [Clause] AS M
 
 this is my sql query, i joined location with case and then location with pay and then location with clause table. Individuallly the total rows of data in payment, location, pay and clause are between 7000 to 10000 on each tables.  
 i tried using the above sql syntax i'm getting like almost 8 to 10 millions rows of data, instead i should have got the outputs of data between 5000 to 7000 rows only, what is gone wrong here and how can i fix this sql inorder to get like max 7000 when i use the where case type as 'Team'
+
+SELECT 
+    L.[Address 1], 
+    L.[Address 2], 
+    L.[Address 3], 
+    C.[Number], 
+    C.[Type], 
+    M.[Status], 
+    M.[Clause Type], 
+    M.[Date of Comp], 
+    M.[Instructed date], 
+    M.[Received date], 
+    L.[Post Code], 
+    C.[Status Reason], 
+    L.[Town]
+FROM 
+    [Case] AS C
+JOIN 
+    [Location] AS L ON C.[Locationid] = L.[Locationid]
+JOIN 
+    [Pay] AS P ON C.[Caseid] = P.[Caseid]
+JOIN 
+    [Clause] AS M ON P.[Clauseid] = M.[Clauseid]
+WHERE 
+    C.[Case Type] = 'Team'
