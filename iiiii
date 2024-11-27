@@ -231,3 +231,34 @@ LEFT  JOIN  [location] L ON L.[areaid] = P.[areaid]
   M.[C Status] ,
   M.[C Type],
   L.[Post Code]
+----------
+
+WITH LatestLocation AS (
+    SELECT 
+        P.claimid,
+        L.PostCode,
+        ROW_NUMBER() OVER (PARTITION BY P.claimid ORDER BY P.areaid DESC) AS rn
+    FROM 
+        payment P
+    INNER JOIN 
+        location L ON L.areaid = P.areaid
+)
+SELECT 
+    M.[Case Reference],     
+    M.[C Status] AS [C Status],
+    M.[Cl Type] AS [C Type],
+    LL.PostCode AS [PostCode], 
+    MAX(TRY_CONVERT(DATE, M.[Date of Com], 103)) AS [Date of Com],
+    MAX(TRY_CONVERT(DATE, M.[Instructed date], 103)) AS [Instructed date],
+    MAX(TRY_CONVERT(DATE, M.[Received date], 103)) AS [Received date]
+FROM 
+    claim M
+LEFT JOIN 
+    LatestLocation LL ON LL.claimid = M.claimid AND LL.rn = 1
+WHERE 
+    [Date of Com] IS NOT NULL AND [Case Reference] = 'TYU9W2R5'
+GROUP BY 
+    M.[Case Reference],
+    M.[C Status],
+    M.[Cl Type],
+    LL.PostCode;
