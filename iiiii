@@ -1,16 +1,49 @@
-select L.[Address  1], L. [Address  2], L. [Address  3] , C.[Number], C.[Type], M.[Status], M.[Clause Type], M.[Date of Comp], M.[Instructed date], M.[Received date], L.[Post Code], C.[Status Reason], L.[Town]
-  FROM [location] AS L
-join [Case] AS C
-   ON L.[Locationid] = C.[Locationid)]
-join [Pay] AS P
-   ON L.[Areaid)] = P.[Areaid)]
-join [Clause] AS M
-   ON P.[Clauseid)] = M.[Clauseid]
-   WHERE [Case Type] = 'Team'
+SELECT 
+    L.[Address 1], 
+    L.[Address 2],
+    L.[Address 3], 
+    C.[Number], 
+    C.[Type], 
+    MAX(M.[Status]) AS Status,
+    MAX(M.[Clause Type]) AS [Clause Type],
+    MAX(M.[Date of Comp]) AS [Date of Comp],
+    MAX(M.[Instructed date]) AS [Instructed date],
+    MAX(M.[Received date]) AS [Received date],
+    L.[Post Code], 
+    C.[Status Reason], 
+    L.[Town]
+FROM 
+    CaseData C
+INNER JOIN LocationData L ON C.[Locationid] = L.[Locationid]
+INNER JOIN PayData P ON C.[Caseid] = P.[Caseid]
+INNER JOIN ClauseData M ON P.[Clauseid] = M.[Clauseid]
+GROUP BY
+    L.[Address 1], L.[Address 2], L.[Address 3], C.[Number], C.[Type],
+    L.[Post Code], C.[Status Reason], L.[Town]
 
-this is my sql query, i joined location with case and then location with pay and then location with clause table. Individuallly the total rows of data in payment, location, pay and clause are between 7000 to 10000 on each tables.  
-i tried using the above sql syntax i'm getting like almost 8 to 10 millions rows of data, instead i should have got the outputs of data between 5000 to 7000 rows only, what is gone wrong here and how can i fix this sql inorder to get like max 7000 when i use the where case type as 'Team'
 
+-------------------
+
+WITH CaseData AS (
+    SELECT [Caseid], [Locationid], [Number], [Type], [Status Reason], [Case Type]
+    FROM [Case]
+    WHERE [Case Type] = 'Team'
+),
+LocationData AS (
+    SELECT L.[Locationid], L.[Address 1], L.[Address 2], L.[Address 3], L.[Post Code], L.[Town]
+    FROM [Location] L
+    INNER JOIN CaseData C ON L.[Locationid] = C.[Locationid]
+),
+PayData AS (
+    SELECT DISTINCT P.[Caseid], P.[Clauseid]
+    FROM [Pay] P
+    INNER JOIN CaseData C ON P.[Caseid] = C.[Caseid]
+),
+ClauseData AS (
+    SELECT M.[Clauseid], M.[Status], M.[Clause Type], M.[Date of Comp], M.[Instructed date], M.[Received date]
+    FROM [Clause] M
+    INNER JOIN PayData P ON M.[Clauseid] = P.[Clauseid]
+)
 SELECT 
     L.[Address 1], 
     L.[Address 2], 
@@ -26,12 +59,102 @@ SELECT
     C.[Status Reason], 
     L.[Town]
 FROM 
-    [Case] AS C
+    CaseData C
+INNER JOIN LocationData L ON C.[Locationid] = L.[Locationid]
+INNER JOIN PayData P ON C.[Caseid] = P.[Caseid]
+INNER JOIN ClauseData M ON P.[Clauseid] = M.[Clauseid]
+
+-----------------------
+
+WITH FilteredCase AS (
+    SELECT *
+    FROM [Case]
+    WHERE [Case Type] = 'Team'
+)
+SELECT DISTINCT 
+    L.[Address 1], 
+    L.[Address 2], 
+    L.[Address 3], 
+    FC.[Number], 
+    FC.[Type], 
+    M.[Status], 
+    M.[Clause Type], 
+    M.[Date of Comp], 
+    M.[Instructed date], 
+    M.[Received date], 
+    L.[Post Code], 
+    FC.[Status Reason], 
+    L.[Town]
+FROM 
+    [Location] AS L
 JOIN 
-    [Location] AS L ON C.[Locationid] = L.[Locationid]
+    FilteredCase AS FC
+    ON L.[Locationid] = FC.[Locationid]
 JOIN 
-    [Pay] AS P ON C.[Caseid] = P.[Caseid]
+    [Pay] AS P
+    ON L.[Areaid] = P.[Areaid]
 JOIN 
-    [Clause] AS M ON P.[Clauseid] = M.[Clauseid]
-WHERE 
-    C.[Case Type] = 'Team'
+    [Clause] AS M
+    ON P.[Clauseid] = M.[Clauseid];
+
+
+-----------------------
+
+WITH LatestClause AS (
+    SELECT 
+        [Clauseid], 
+        MAX([Date of Comp]) AS MaxDateOfComp
+    FROM 
+        [Clause]
+    GROUP BY 
+        [Clauseid]
+),
+FilteredCase AS (
+    SELECT 
+        * 
+    FROM 
+        [Case]
+    WHERE 
+        [Case Type] = 'Team'
+)
+SELECT DISTINCT 
+    L.[Address 1], 
+    L.[Address 2], 
+    L.[Address 3], 
+    C.[Number], 
+    C.[Type], 
+    M.[Status], 
+    M.[Clause Type], 
+    M.[MaxDateOfComp], 
+    M.[Instructed date], 
+    M.[Received date], 
+    L.[Post Code], 
+    C.[Status Reason], 
+    L.[Town]
+FROM 
+    [Location] AS L
+JOIN 
+    FilteredCase AS C
+    ON L.[Locationid] = C.[Locationid]
+JOIN 
+    [Pay] AS P
+    ON L.[Areaid] = P.[Areaid]
+JOIN 
+    LatestClause AS M
+    ON P.[Clauseid] = M.[Clauseid];
+--------------
+
+WITH LatestClause AS (
+    SELECT 
+        [Clauseid], 
+        MAX([Date of Comp]) AS MaxDateOfComp,
+        MAX([Instructed date]) AS MaxInstructedDate,
+        MAX([Received date]) AS MaxReceivedDate
+    FROM 
+        [Clause]
+    GROUP BY 
+        [Clauseid]
+)
+---------------------
+
+
