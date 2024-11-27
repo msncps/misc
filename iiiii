@@ -158,3 +158,27 @@ WITH LatestClause AS (
 ---------------------
 
 
+SELECT 
+    L.[Address 1], 
+    L.[Address 2], 
+    L.[Address 3], 
+    C.[Number], 
+    C.[Type], 
+    MAX(M.[Status]) AS Status,
+    MAX(M.[Clause Type]) AS [Clause Type],
+    MAX(CONVERT(DATE, M.[Date of Comp])) AS [Date of Comp],
+    MAX(CONVERT(DATE, M.[Instructed date])) AS [Instructed date],
+    MAX(CONVERT(DATE, M.[Received date])) AS [Received date],
+    L.[Post Code], 
+    C.[Status Reason], 
+    L.[Town]
+FROM 
+    CaseData C
+INNER JOIN LocationData L ON C.[Locationid] = L.[Locationid]
+INNER JOIN PayData P ON C.[Caseid] = P.[Caseid]
+INNER JOIN ClauseData M ON P.[Clauseid] = M.[Clauseid]
+WHERE 
+    M.[Clause Type] = 'TEAM' -- Filter before grouping
+GROUP BY
+    L.[Address 1], L.[Address 2], L.[Address 3], C.[Number], C.[Type],
+    L.[Post Code], C.[Status Reason], L.[Town];
