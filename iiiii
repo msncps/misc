@@ -182,3 +182,32 @@ WHERE
 GROUP BY
     L.[Address 1], L.[Address 2], L.[Address 3], C.[Number], C.[Type],
     L.[Post Code], C.[Status Reason], L.[Town];
+
+---------------
+
+SELECT 
+    L.[Address 1], 
+    L.[Address 2], 
+    L.[Address 3], 
+    C.[Number], 
+    C.[Type], 
+    MAX(M.[Status]) AS Status,
+    MAX(M.[Clause Type]) AS [Clause Type],
+    MAX(TRY_CONVERT(DATE, M.[Date of Comp], 103)) AS [Date of Comp], -- UK date format (DD/MM/YYYY)
+    MAX(TRY_CONVERT(DATE, M.[Instructed date], 103)) AS [Instructed date],
+    MAX(TRY_CONVERT(DATE, M.[Received date], 103)) AS [Received date],
+    L.[Post Code], 
+    C.[Status Reason], 
+    L.[Town]
+FROM 
+    CaseData C
+INNER JOIN LocationData L ON C.[Locationid] = L.[Locationid]
+INNER JOIN PayData P ON C.[Caseid] = P.[Caseid]
+INNER JOIN ClauseData M ON P.[Clauseid] = M.[Clauseid]
+WHERE 
+    M.[Clause Type] = 'TEAM' 
+    AND TRY_CONVERT(DATE, M.[Date of Comp], 103) IS NOT NULL -- Exclude invalid dates
+GROUP BY
+    L.[Address 1], L.[Address 2], L.[Address 3], C.[Number], C.[Type],
+    L.[Post Code], C.[Status Reason], L.[Town];
+
