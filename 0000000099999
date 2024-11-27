@@ -1,0 +1,60 @@
+SELECT
+    M.[Case Reference],
+    M.[C Status],
+    M.[C Type],
+    L.[Post Code],
+    MAX(TRY_CONVERT(DATE, M.[Date of Com], 103)) AS [Date of Com],
+    MAX(TRY_CONVERT(DATE, M.[Instructed date], 103)) AS [Instructed date],
+    MAX(TRY_CONVERT(DATE, M.[Received date], 103)) AS [Received date]
+FROM
+    [claim] M
+INNER JOIN (
+    SELECT
+        P.[claimid],
+        MAX(TRY_CONVERT(DATE, M.[Date of Com], 103)) AS MaxDate
+    FROM
+        [claim] M
+    INNER JOIN [payment] P ON P.[claimid] = M.[claimid]
+    GROUP BY
+        P.[claimid]
+) MaxDates ON M.[claimid] = MaxDates.[claimid]
+INNER JOIN [payment] P ON P.[claimid] = M.[claimid] AND TRY_CONVERT(DATE, M.[Date of Com], 103) = MaxDates.MaxDate
+INNER JOIN [location] L ON L.[areaid] = P.[areaid]
+WHERE
+    M.[Date of Com] IS NOT NULL AND M.[Case Reference] = 'TYU9W2R5'
+GROUP BY
+    M.[Case Ref],
+    M.[Status],
+    M.[C Status],
+    M.[C Type],
+    L.[Post Code];
+
+------------------
+
+SELECT 
+    M.[Case Reference],     
+    M.[C Status] AS [C Status],
+    M.[Cl Type] AS [C Type],
+    (SELECT TOP 1 
+         L.[Post Code]
+     FROM 
+         [location] L
+     INNER JOIN 
+         [payment] P ON L.[areaid] = P.[areaid]
+     WHERE 
+         P.[claimid] = M.[claimid]
+     ORDER BY 
+         TRY_CONVERT(DATE, M.[Date of Com], 103) DESC
+    ) AS [PostCode],
+    MAX(TRY_CONVERT(DATE, M.[Date of Com], 103)) AS [Date of Com],
+    MAX(TRY_CONVERT(DATE, M.[Instructed date], 103)) AS [Instructed date],
+    MAX(TRY_CONVERT(DATE, M.[Received date], 103)) AS [Received date]
+FROM  
+    [claim] M
+WHERE 
+    [Date of Com] IS NOT NULL 
+    AND [Case Reference] = 'TYU9W2R5'
+GROUP BY 
+    M.[Case Reference],
+    M.[C Status],
+    M.[Cl Type];
